@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.9.2
+  sdk: ^3.0.0 # Se recomienda usar un rango de versión estable (ej: ^3.0.0) en lugar de una versión específica de desarrollo como '3.9.2'.
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -38,6 +38,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  
+  # CORRECCIÓN: 'flutter_launcher_icons' debe estar al mismo nivel que 'flutter_test'
+  flutter_launcher_icons: "^0.14.4" 
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -45,6 +48,12 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+
+# CORRECCIÓN: La configuración de 'flutter_launcher_icons' debe ir a nivel raíz (cero indentación).
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/lluvia.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
